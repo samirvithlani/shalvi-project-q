@@ -1,0 +1,14 @@
+event -->  type --> 
+event --> teams ->
+teams -> players
+matches
+
+20000 users -->  teams --> 10 --> 70 players
+
+admin team create --
+
+admin event create --> qpl 20th july --> teams --> 10 mi,csk,..
+
+1user login -> event display -->
+clisk ->detail -->teams -->10 -->  Mi team select --> register --> opetion role --> seeker -->
+register -->

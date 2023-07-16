@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const eventController = require('../controller/eventController');
+router.post('/create', eventController.createEvent);
+router.get('/get', eventController.getEvent);
+router.get('/get/:id', eventController.getEventById);
+router.put('/update/:id', eventController.updateEvent);
+router.delete('/delete/:id', eventController.deleteEvent);
+router.put('/addteam/:id', eventController.addTeamToEvent);
+router.put('/removeteam/:id', eventController.removeTeamFromEvent);
+module.exports = router;
