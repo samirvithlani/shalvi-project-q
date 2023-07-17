@@ -121,7 +121,23 @@ const removePlayerFromTeam = async (req, res) => {
         });
     }
     }
-
+const getPlayerByTeamIdAndEventId = async (req, res) => {
+    try {
+        const team = await teamSchema.find({
+        _id: req.params.teamid,
+        event: req.params.eventid,
+        });
+        res.status(200).json({
+        message: 'Player By Team Id And Event Id',
+        team: team,
+        });
+    } catch (error) {
+        res.status(500).json({
+        message: 'Error While Getting Player By Team Id And Event Id',
+        error: error,
+        });
+    }
+}
 module.exports = {
     createTeam,
     getTeam,
@@ -130,5 +146,6 @@ module.exports = {
     deleteTeam,
     addPlayerToTeam,
     removePlayerFromTeam,
-    getTeamByEventId
+    getTeamByEventId,
+    getPlayerByTeamIdAndEventId,
 };
