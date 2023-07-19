@@ -9,6 +9,7 @@ const userRoutes = require("./routes/UserRoutes");
 const teamRoutes = require("./routes/TeamRoutes");
 const playerRoutes = require("./routes/PlayerRoutes");
 const eventRoutes = require("./routes/EventRoutes");
+const playerRoleRoutes = require("./routes/PlayerRoleRoutes");
 
 
 
@@ -35,6 +36,7 @@ app.use('/user',userRoutes)
 app.use('/team',teamRoutes)
 app.use('/player',playerRoutes)
 app.use('/event',eventRoutes)
+app.use('/playerRole',playerRoleRoutes)
 
 
 app.listen(PORT, () => {
