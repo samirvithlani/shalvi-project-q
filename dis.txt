@@ -12,3 +12,13 @@ admin event create --> qpl 20th july --> teams --> 10 mi,csk,..
 1user login -> event display -->
 clisk ->detail -->teams -->10 -->  Mi team select --> register --> opetion role --> seeker -->
 register -->
+
+
+admin can event create --> admin team create -->
+admin can schedule matches
+  
+
+admin can manage ticket
+
+
+

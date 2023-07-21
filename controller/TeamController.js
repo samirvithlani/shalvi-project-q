@@ -1,4 +1,31 @@
 const teamSchema = require('../models/TeamModel');
+const getPlayersByTeamId = async (req, res) => {
+    console.log(req.params.teamid);
+    try {
+        const team = await teamSchema.findById(req.params.teamid).populate('players').populate({
+            path: 'players',
+            populate:{
+                path:'user',
+                model:'user',
+            }
+        }).populate({
+            path: 'players',
+            populate:{
+                path:'playerRole',
+                model:'playerRole',
+            }
+        });
+        res.status(200).json({
+        message: 'Players By Team Id',
+        team: team,
+        });
+    } catch (error) {
+        res.status(500).json({
+        message: 'Error While Getting Players By Team Id',
+        error: error,
+        });
+    }
+}
 const createTeam = async (req, res) => {
   try {
     console.log(req.body);
@@ -148,4 +175,5 @@ module.exports = {
     removePlayerFromTeam,
     getTeamByEventId,
     getPlayerByTeamIdAndEventId,
+    getPlayersByTeamId
 };

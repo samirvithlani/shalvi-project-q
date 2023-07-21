@@ -17,7 +17,7 @@ const PORT = 5000;
 
 //database connection
 
-mongoose.connect("mongodb://127.0.0.1:27017/quidditch", {
+mongoose.connect("mongodb+srv://samir:samir@cluster0.key63fx.mongodb.net/quidditch", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(()=>{

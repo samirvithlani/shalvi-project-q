@@ -8,4 +8,5 @@ router.put('/update/:id', teamController.updateTeam);
 router.delete('/delete/:id', teamController.deleteTeam);
 router.put('/addplayer/:id', teamController.addPlayerToTeam);
 router.put('/removeplayer/:id', teamController.removePlayerFromTeam);
+router.get('/getplayer/:teamid', teamController.getPlayersByTeamId);
 module.exports = router;
