@@ -10,6 +10,7 @@ const teamRoutes = require("./routes/TeamRoutes");
 const playerRoutes = require("./routes/PlayerRoutes");
 const eventRoutes = require("./routes/EventRoutes");
 const playerRoleRoutes = require("./routes/PlayerRoleRoutes");
+const ticketRoutes=require('./routes/TicketRoutes')
 
 
 
@@ -37,6 +38,7 @@ app.use('/team',teamRoutes)
 app.use('/player',playerRoutes)
 app.use('/event',eventRoutes)
 app.use('/playerRole',playerRoleRoutes)
+app.use('/ticket',ticketRoutes)
 
 
 app.listen(PORT, () => {

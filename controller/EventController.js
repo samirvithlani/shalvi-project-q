@@ -11,6 +11,9 @@ const createEvent = async (req, res) => {
         eventDate: new Date(req.body.eventDate),
         eventTime: req.body.eventTime,
         eventType: req.body.eventType,
+        teams:req.body.teams,
+        price:req.body.price,
+        totalSeat:req.body.totalSeat
         });
         await event.save();
         res.status(200).json({
