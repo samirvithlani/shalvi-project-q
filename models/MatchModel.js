@@ -2,10 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const MatchSchema = new Schema({
-    matchId:{
-        type:String,
-        required:true
-    },
+
+    
     team1:{
         type:Schema.Types.ObjectId,
         ref:"Team",
