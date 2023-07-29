@@ -1,5 +1,7 @@
 const TicketModel = require('../models/TicketModel');
 const eventSchema = require('../models/eventModel');
+const genMail=require('../util/emailGen')
+const userSchema=require('../models/UserModel')
 
 module.exports.createTicket = (async (req, res) => {
     try {
@@ -48,6 +50,8 @@ module.exports.createTicket = (async (req, res) => {
             console.log("updated", updatedSeat)
             await eventSchema.updateOne({ _id: req.body.event }, { price: updatedSeat }).exec()
             console.log(seatsLeft)
+            var users=await userSchema.findById(req.body.user).exec()
+            genMail(await users.email,data._id)
             res.status(200).json({ message: "ticket generated sucessfully", ticketId: data._id })
         }).catch((error) => {
             res.status(400).json({ message: "ticket not generated sucessfully", ticketId: error })
