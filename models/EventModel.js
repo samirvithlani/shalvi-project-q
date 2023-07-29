@@ -16,6 +16,7 @@ const evnetSchema = Schema({
     },
     eventType:{
         type:String,
+        default:"daily"
     },
     status: {
         type: Boolean,
