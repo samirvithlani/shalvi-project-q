@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const TicketSchema = new Schema({
-    ticketId:{
-        type:String,
-        required:true,
-        unique:true
-    },
     user:{
         type:Schema.Types.ObjectId,
         ref:"User",
@@ -19,15 +14,19 @@ const TicketSchema = new Schema({
         ref:"Match",
     },
     seat:{
-        type:String,
-        required:true
+        seatType:{
+            type:String
+        },
+        person:{
+            type:Number
+        }
     },
     price:{
         type:String,
         required:true
     },
     status:{
-        type:boolean,
+        type:Boolean,
         required:true,
         default:true
     },

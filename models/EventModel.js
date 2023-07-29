@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const evnetSchema = Schema({
+const evnetSchema = new Schema({
 
     name: {
         type: String,
@@ -25,7 +25,25 @@ const evnetSchema = Schema({
     teams: [{
         type: Schema.Types.ObjectId,
         ref: "team",
-    }]
+    }],
+    price:{
+        premium:{
+            seat:{
+                type:Number
+            },
+            price:{
+                type:Number
+            }
+        },
+        nonPremium:{
+            seat:{
+                type:Number
+            },
+            price:{
+                type:Number
+            }
+        }
+    },
 },{
     timestamps:true,
 })
