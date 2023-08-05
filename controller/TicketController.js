@@ -1,5 +1,5 @@
 const TicketModel = require('../models/TicketModel');
-const eventSchema = require('../models/eventModel');
+const eventSchema = require('../models/EventModel');
 const genMail=require('../util/emailGen')
 const userSchema=require('../models/UserModel')
 
