@@ -34,7 +34,7 @@ const MatchSchema = new Schema({
     },
     status:{
         type:String,
-        required:true
+        default:"upcoming"
     },
     score:{
         type:String,
