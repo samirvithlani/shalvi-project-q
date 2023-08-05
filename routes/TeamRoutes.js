@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const teamController = require('../controller/teamController');
+const teamController = require('../controller/TeamController');
 router.post('/create', teamController.createTeam);
 router.get('/get/:eventid', teamController.getTeamByEventId);
 router.get('/get/:id', teamController.getTeamById);
