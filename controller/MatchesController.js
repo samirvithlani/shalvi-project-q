@@ -1,5 +1,5 @@
 const MatchModel = require("../models/MatchModel")
-const mathchModel = require("../models/MatchModel")
+
 
 exports.addMatches = (async(request,response)=>{
 
