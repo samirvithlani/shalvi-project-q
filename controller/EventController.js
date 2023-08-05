@@ -1,4 +1,4 @@
-const eventSchema = require('../models/eventModel');
+const eventSchema = require('../models/EventModel');
 
 const createEvent = async (req, res) => {
     date = new Date(req.body.eventDate)
