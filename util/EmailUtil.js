@@ -1,5 +1,6 @@
 const nm = require('nodemailer');
 const genMail = async (to) => {
+    console.log("........",to)
     let transporter = nm.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -21,7 +22,7 @@ const genMail = async (to) => {
                 </div>
                 <p style="font-size:1.1em">Hi,</p>
                 <p>Thank you for choosing our Brand.</p>
-                <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">${ticketid}</h2>
+                <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;"></h2>
                 <h2>Please Show this Id at the Gate to access the event</h2>
                 <p style="font-size:0.9em;">Regards,<br />Your Brand</p>
                 <hr style="border:none;border-top:1px solid #eee" />
@@ -43,4 +44,4 @@ const genMail = async (to) => {
     })
 };
 
-module.exports = genMail;
+module.exports = {genMail};

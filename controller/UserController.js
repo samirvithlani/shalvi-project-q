@@ -5,9 +5,9 @@ const addUser = async (req, res) => {
   const user = new userModel(req.body);
   user
     .save()
-    .then(async(data) => {
-      const res1 = await emailUtil(data.email);
-      console.log(res1);
+    .then((data) => {
+      emailUtil.genMail(data.email);
+      
       res.status(201).json({
         message: "User added successfully",
         data: data,
