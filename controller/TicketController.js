@@ -7,6 +7,7 @@ module.exports.createTicket = (async (req, res) => {
     try {
         console.log(req.body)
         var event = await eventSchema.findById(req.body.event)
+    
         console.log(event)
         if (req.body.seat.seatType == 'premium') {
             if (event.price.premium.seat >= req.body.seat.person) {

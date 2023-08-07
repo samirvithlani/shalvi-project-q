@@ -1,5 +1,5 @@
 const nm = require('nodemailer');
-const genMail = async (to,ticketid) => {
+const genMail = async (to) => {
     let transporter = nm.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -13,14 +13,14 @@ const genMail = async (to,ticketid) => {
     const mailOptions = {
         from: 'quidditchchronicle@gmail.com',
         to: to,
-        subject: "ticket booking mail",
+        subject: "welcome to quidditch chronicle",
         html: `<div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
             <div style="margin:50px auto;width:70%;padding:20px 0">
                 <div style="border-bottom:1px solid #eee">
                     <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">Your Brand</a>
                 </div>
                 <p style="font-size:1.1em">Hi,</p>
-                <p>Thank you for choosing our Brand. Your TicketId Is.</p>
+                <p>Thank you for choosing our Brand.</p>
                 <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">${ticketid}</h2>
                 <h2>Please Show this Id at the Gate to access the event</h2>
                 <p style="font-size:0.9em;">Regards,<br />Your Brand</p>

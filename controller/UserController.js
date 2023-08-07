@@ -1,10 +1,13 @@
 const userModel = require("../models/UserModel");
+const emailUtil = require("../util/EmailUtil");
 
 const addUser = async (req, res) => {
   const user = new userModel(req.body);
   user
     .save()
-    .then((data) => {
+    .then(async(data) => {
+      const res1 = await emailUtil(data.email);
+      console.log(res1);
       res.status(201).json({
         message: "User added successfully",
         data: data,
