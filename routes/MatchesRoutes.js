@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.post("/addMatch",matchController.addMatches),
 router.get("/get/match/:id",matchController.getAllMatchesById)
-router.get("/get/allmatches",matchController.getAllMatchs)
+router.get("/get",matchController.getAllMatchs)
 router.delete("/delete/match/:id",matchController.deleteMatch)
 
 module.exports = router;

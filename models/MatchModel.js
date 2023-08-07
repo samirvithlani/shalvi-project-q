@@ -6,19 +6,19 @@ const MatchSchema = new Schema({
     
     team1:{
         type:Schema.Types.ObjectId,
-        ref:"Team",
+        ref:"team",
     },
     team2:{
         type:Schema.Types.ObjectId,
-        ref:"Team",
+        ref:"team",
     },
     winner:{
         type:Schema.Types.ObjectId,
-        ref:"Team",
+        ref:"team",
     },
     event:{
         type:Schema.Types.ObjectId,
-        ref:"Event",
+        ref:"event",
     },
     date:{
         type:Date,

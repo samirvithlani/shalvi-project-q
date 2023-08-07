@@ -27,7 +27,7 @@ const getUsers = async (req, res) => {
     .then((data) => {
       res.status(200).json({
         message: "Users fetched successfully",
-        data: data,
+        user: data,
       });
     })
     .catch((err) => {

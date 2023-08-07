@@ -29,18 +29,22 @@ const evnetSchema = new Schema({
     price:{
         premium:{
             seat:{
-                type:Number
+                type:Number,
+                default:1000
             },
             price:{
-                type:Number
+                type:Number,
+                default:1000
             }
         },
         nonPremium:{
             seat:{
-                type:Number
+                type:Number,
+                default:500
             },
             price:{
-                type:Number
+                type:Number,
+                default:500
             }
         }
     },

@@ -52,7 +52,8 @@ exports.getAllMatchs =(async(request,response)=>{
     try{
         
         
-        const data = await MatchModel.find({});
+        const data = await MatchModel.find().populate("team1").
+        populate("team2").populate("winner");
 
         if(data){
             return response.status(200).json({
